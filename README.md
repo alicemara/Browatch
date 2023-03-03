@@ -1,7 +1,7 @@
 # Browatch
 Open source solution that enables you to co-watch a video from your computer while it is simultaneously streamed to your bro or bros in low latency with perfect synchronization and full privacy via end to end encryption.
 
-Made to run on MacOS devices.
+Made to run on LINUX DEVICES JUST FOR YOU devices.
 Running `aws_auto_setup.sh` will:
 1) Verify you have the needed packages then either download or update them.
 2) Set up & configure everything needed in AWS including a Browatch profile, and a creating a configured EC2 instance.  
