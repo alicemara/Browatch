@@ -180,7 +180,7 @@ ffmpeg \
 
 fi
 
-./packager-osx-x64 \
+./packager-linux-x64 \
    --io_block_size 65536 \
    --segment_duration 3 \
    --low_latency_dash_mode=true \
@@ -199,7 +199,5 @@ fi
 echo "You'll have the link in just a moment..."
 sleep 7
 
-# open is a universal upener in OSX, will want to expand depending on host machine
-open "https://${1}/${VID}.html#keyid=${keyidbase}&key=${keybase}"
 echo "Here's a link to share!"
 echo "https://${1}/${VID}.html#keyid=${keyidbase}&key=${keybase}"
