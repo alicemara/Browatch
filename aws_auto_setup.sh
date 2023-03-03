@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #cleanup .txt files used to define variables if script was interrupted before cleanup previously
-rm -f eip2.txt eip.txt instanceid.txt deleteid.txt rgn.txt amiid.txt media.key keyid.txt keybase64.txt keyidbase64.txt pdns.txt pipe
+rm -f eip2.txt eip.txt instanceid.txt rgn.txt amiid.txt media.key keyid.txt keybase64.txt keyidbase64.txt pdns.txt pipe
 
 # Check package manager and download awscli
 # From: https://unix.stackexchange.com/a/571192
@@ -52,15 +52,6 @@ echo "No previous browatch instances found to terminate."
 
 fi
 
-
-
-#aws ec2 describe-instances --filters "Name=instance.group-name,Values='browatch'" --output text --query 'Reservations[*].Instances[*].InstanceId' > deleteid.txt 
-#doid=$(cat deleteid.txt)
-#aws ec2 terminate-instances --instance-ids $doid
-
-#echo "Waiting 30 seconds to allow any extra instances to terminate...(you may see an error if there were no instances to terminate)"
-
-#sleep 30
 
 echo "We will create your SSH keys now. They will be named browatch.pem. Any prior ones with the same name will be overwritten."
 sleep 5
@@ -148,4 +139,4 @@ wait
 echo "Kill the stream with killStream.sh and kill the web server by connecting to it and running killServer.sh"
 echo "If you aren't going to use the instance again, I would recommend deleting it as well so you don't rack up charges"
 #cleanup files used to define variables and debug
-rm -f eip2.txt eip.txt instanceid.txt deleteid.txt rgn.txt amiid.txt media.key keyid.txt keybase64.txt keyidbase64.txt pdns.txt
+rm -f eip2.txt eip.txt instanceid.txt rgn.txt amiid.txt media.key keyid.txt keybase64.txt keyidbase64.txt pdns.txt
