@@ -112,7 +112,7 @@ sleep 2
 # Pulling ssh keys to local machine, connecting to new Ec2 instance, and running the autoinstaller for the ec2 instance
 echo "Moving server files to instance..."
 sleep 2
-scp -i ./browatch.pem caddy buildServer.sh launchServer.sh killServer.sh ubuntu@${pdns}:/home/ubuntu
+scp -i ./browatch.pem buildServer.sh launchServer.sh killServer.sh ubuntu@${pdns}:/home/ubuntu
 echo "SSHing into instance to set up web server"
 sleep 2
 ssh -t -i ./browatch.pem ubuntu@${pdns} 'sudo ./buildServer.sh && sudo ./launchServer.sh'
