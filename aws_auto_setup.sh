@@ -138,5 +138,6 @@ wait
 #Echos a link for you to use/share
 echo "Kill the stream with killStream.sh and kill the web server by connecting to it and running killServer.sh"
 echo "If you aren't going to use the instance again, I would recommend deleting it as well so you don't rack up charges"
+echo "You can run deleteremoteServer.sh to delete the instance when you are done with it."
 #cleanup files used to define variables and debug
 rm -f eip2.txt eip.txt instanceid.txt rgn.txt amiid.txt media.key keyid.txt keybase64.txt keyidbase64.txt pdns.txt
