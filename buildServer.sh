@@ -25,4 +25,4 @@ mkdir /var/www/html
 
 sudo crontab -r
 sudo touch /etc/crontab
-sudo crontab -l | { cat; echo "* * * * * find /var/www/html/ \( -name "*.m4a" -o -name "*.m4v" -name "*.m4s" -o -name "*.ts" \) -mmin +1 -exec rm {} \;"; } | sudo crontab -
+sudo crontab -l | { cat; echo "* * * * * find /var/www/html/ \( -name "*.m4a" -o -name "*.m4v" -o -name "*.m4s" -o -name "*.ts" \) -mmin +1 -exec rm {} \;"; } | sudo crontab -
